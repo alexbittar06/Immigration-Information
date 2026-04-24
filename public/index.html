@@ -7,8 +7,13 @@
       (function () {
         var b = document.getElementById("site-base");
         if (!b || !location.hostname.endsWith("github.io")) return;
-        var segs = location.pathname.split("/").filter(Boolean);
-        if (segs.length && !/\.html?$/i.test(segs[0])) b.href = "/" + segs[0] + "/";
+        var path = location.pathname || "/";
+        // Only /Repo or /Repo/ (no .html). Otherwise keep ./ so links resolve from the current file's folder.
+        var m = path.match(/^\/([^/]+)\/?$/);
+        if (!m) return;
+        var seg = m[1];
+        if (/\.html?$/i.test(seg)) return;
+        b.href = "/" + seg + "/";
       })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
