@@ -1608,6 +1608,33 @@ function getJourneyTree() {
   return localizeGuideTree(JSON.parse(JSON.stringify(journeyTreeEn)));
 }
 
+function getSiteBasePath() {
+  const path = window.location.pathname || "/";
+  const parts = path.split("/").filter(Boolean);
+
+  if (window.location.hostname.endsWith("github.io")) {
+    if (parts.length === 0) return "/";
+    return `/${parts[0]}/`;
+  }
+
+  if (/\.html?$/i.test(path)) {
+    return path.replace(/[^/]*$/, "");
+  }
+
+  return path.endsWith("/") ? path : `${path}/`;
+}
+
+function normalizeInternalLinks() {
+  const basePath = getSiteBasePath();
+  document.querySelectorAll("a[href^='./']").forEach((a) => {
+    const raw = a.getAttribute("href");
+    if (!raw) return;
+    const target = raw.replace(/^\.\//, "");
+    if (!/\.html?($|[?#])/i.test(target)) return;
+    a.setAttribute("href", `${basePath}${target}`);
+  });
+}
+
 function highlightNav() {
   const parts = window.location.pathname.split("/").filter(Boolean);
   let file = "index.html";
@@ -1617,9 +1644,12 @@ function highlightNav() {
   }
 
   document.querySelectorAll(".nav-list a[href]").forEach((a) => {
-    const href = a.getAttribute("href").replace(/^\.\//, "");
+    const hrefAttr = a.getAttribute("href") || "";
+    const href = hrefAttr.split("?")[0].split("#")[0];
+    const hrefFile = href.split("/").filter(Boolean).pop() || "";
     const match = href === file || (href === "index.html" && file === "index.html");
-    if (match) a.setAttribute("aria-current", "page");
+    const finalMatch = match || (hrefFile === file) || (hrefFile === "index.html" && file === "index.html");
+    if (finalMatch) a.setAttribute("aria-current", "page");
     else a.removeAttribute("aria-current");
   });
 }
@@ -1828,6 +1858,7 @@ if (currentLang === "es" && langEnBtn && langEsBtn) {
   langEsBtn.setAttribute("aria-pressed", "true");
 }
 
+normalizeInternalLinks();
 applyI18n();
 
 if (guideContainer) {
