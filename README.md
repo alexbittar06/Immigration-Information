@@ -27,6 +27,8 @@ The site is static files under `public/`. GitHub Pages does not run `server.js`;
    `https://alexbittar06.github.io/Immigration-Information/`  
    (your username + repo name). Opening that URL loads `public/index.html`.
 
+**Project-site URLs:** GitHub often links to `…/Immigration-Information` *without* a trailing slash. In that case, plain relative links like `./legal.html` would incorrectly resolve to `…/legal.html` at the domain root (404). Each HTML page sets a `<base>` tag with a tiny script so that, on `*.github.io`, links and assets stay under `/YourRepoName/`.
+
 If the workflow fails, check **Actions** → the failed run → logs. Common fixes: enable **Settings → Pages → Source: GitHub Actions**; ensure **Actions** are allowed in **Settings → Actions → General**.
 
 ## Project structure
