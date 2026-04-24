@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What To Do If Detained</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-theme="usa" data-page="detained" data-title-key="detainedPageTitle">
+    <header class="hero hero--compact">
+      <div class="container hero-inner">
+        <div class="hero-top">
+          <div class="controls" role="toolbar" aria-label="Display options">
+            <label class="control-label">
+              <span data-i18n="themeLabel">Flag colors</span>
+              <select id="themeSelect" class="theme-select"></select>
+            </label>
+            <div class="lang-toggle" role="group" aria-label="Language">
+              <span class="control-label" data-i18n="langLabel">Language</span>
+              <div class="lang-buttons">
+                <button type="button" id="langEn" class="lang-btn is-active" aria-pressed="true">
+                  English
+                </button>
+                <button type="button" id="langEs" class="lang-btn" aria-pressed="false">
+                  Español
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h1 data-i18n="detainedTitle">What To Do If Detained</h1>
+        <p data-i18n="detainedHeroLead"></p>
+        <p class="disclaimer" data-i18n="disclaimer">
+          This website is educational information, not legal advice.
+        </p>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Primary">
+      <div class="container">
+        <ul class="nav-list">
+          <li><a href="./index.html" data-i18n="navHome">Home</a></li>
+          <li><a href="./rights.html" data-i18n="navRights">Know your rights</a></li>
+          <li><a href="./detained.html" data-i18n="navDetained">If detained</a></li>
+          <li><a href="./legal.html" data-i18n="navLegal">Legal help by state</a></li>
+          <li><a href="./guide.html" data-i18n="navGuide">Guided situation guide</a></li>
+          <li><a href="./quiz.html" data-i18n="navQuiz">Citizenship practice quiz</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container page-flow page-detained">
+      <section class="card card--lede card--detained-ribbon">
+        <h2 data-i18n="detainedTitle">What To Do If Detained</h2>
+        <p class="detained-intro" data-i18n="detainedOverviewP1"></p>
+        <p class="detained-intro" data-i18n="detainedOverviewP2"></p>
+        <div class="pillars-band pillars-band--numbered">
+          <p class="pillars-band__label" data-i18n="detainedPillarsLead"></p>
+          <ol class="checklist checklist--pillars checklist--ordered">
+            <li data-i18n="detained1">Stay calm and state that you want to speak with a lawyer.</li>
+            <li data-i18n="detained2">Memorize and call a trusted emergency contact.</li>
+            <li data-i18n="detained3">Ask where you are being taken and your A-Number if available.</li>
+            <li data-i18n="detained4">Contact a legal aid organization immediately.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="card card--situations" aria-labelledby="detained-situations-heading">
+        <div class="situations-head">
+          <h2 id="detained-situations-heading" data-i18n="detainedSituationsHeading"></h2>
+          <p class="situations-sub" data-i18n="detainedSituationsSub"></p>
+        </div>
+        <div class="situation-stack">
+          <details class="situation-card situation-card--urgent" id="detained-ice">
+            <summary class="situation-card__summary">
+              <span class="situation-card__glyph" aria-hidden="true">⌂</span>
+              <span class="situation-card__title" data-i18n="detainedSitIceTitle"></span>
+              <span class="situation-card__chev" aria-hidden="true"></span>
+            </summary>
+            <div class="situation-card__body">
+              <p data-i18n="detainedSitIceP1"></p>
+              <p data-i18n="detainedSitIceP2"></p>
+            </div>
+          </details>
+          <details class="situation-card" id="detained-traffic">
+            <summary class="situation-card__summary">
+              <span class="situation-card__glyph" aria-hidden="true">◎</span>
+              <span class="situation-card__title" data-i18n="detainedSitTrafficTitle"></span>
+              <span class="situation-card__chev" aria-hidden="true"></span>
+            </summary>
+            <div class="situation-card__body">
+              <p data-i18n="detainedSitTrafficP1"></p>
+              <p data-i18n="detainedSitTrafficP2"></p>
+            </div>
+          </details>
+          <details class="situation-card" id="detained-work">
+            <summary class="situation-card__summary">
+              <span class="situation-card__glyph" aria-hidden="true">▣</span>
+              <span class="situation-card__title" data-i18n="detainedSitWorkTitle"></span>
+              <span class="situation-card__chev" aria-hidden="true"></span>
+            </summary>
+            <div class="situation-card__body">
+              <p data-i18n="detainedSitWorkP1"></p>
+              <p data-i18n="detainedSitWorkP2"></p>
+            </div>
+          </details>
+          <details class="situation-card" id="detained-public">
+            <summary class="situation-card__summary">
+              <span class="situation-card__glyph" aria-hidden="true">◇</span>
+              <span class="situation-card__title" data-i18n="detainedSitPublicTitle"></span>
+              <span class="situation-card__chev" aria-hidden="true"></span>
+            </summary>
+            <div class="situation-card__body">
+              <p data-i18n="detainedSitPublicP1"></p>
+              <p data-i18n="detainedSitPublicP2"></p>
+            </div>
+          </details>
+          <details class="situation-card" id="detained-custody">
+            <summary class="situation-card__summary">
+              <span class="situation-card__glyph" aria-hidden="true">⬡</span>
+              <span class="situation-card__title" data-i18n="detainedSitCustodyTitle"></span>
+              <span class="situation-card__chev" aria-hidden="true"></span>
+            </summary>
+            <div class="situation-card__body">
+              <p data-i18n="detainedSitCustodyP1"></p>
+              <p data-i18n="detainedSitCustodyP2"></p>
+              <p data-i18n="detainedSitCustodyP3"></p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="card card--resources" aria-labelledby="detained-resources-heading">
+        <h2 id="detained-resources-heading" data-i18n="detainedResourcesHeading"></h2>
+        <p class="resources-intro" data-i18n="detainedResourcesIntro"></p>
+        <ul class="resource-list">
+          <li>
+            <a
+              href="https://www.ice.gov/detain/detainee-locator"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="detainedLinkIceLocator"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.aclu.org/documents/know-your-rights-if-ice-agents-show-your-door"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="rightsLinkAcluIceDoor"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.aclu.org/know-your-rights/immigrants-rights"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="rightsLinkAcluImmigrants"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.aclu.org/know-your-rights/stopped-by-police"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="rightsLinkAcluPolice"
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.justice.gov/eoir" target="_blank" rel="noopener noreferrer" data-i18n="guideLink_eoir"></a>
+          </li>
+          <li>
+            <a
+              href="https://www.immigrationadvocates.org/nonprofit/legaldirectory/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="guideLink_advocates_dir"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.nilc.org/issues/detention-enforcement/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="detainedLinkNilcDetention"
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.ilrc.org/detention" target="_blank" rel="noopener noreferrer" data-i18n="detainedLinkIlrcDetention"></a>
+          </li>
+        </ul>
+      </section>
+
+      <p class="page-next">
+        <a href="./legal.html" data-i18n="nextLegal">Next: Legal help by state →</a>
+      </p>
+    </main>
+
+    <footer class="container footer">
+      <p data-i18n="footerNote">
+        Add local nonprofit contacts and emergency hotline numbers for your community.
+      </p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

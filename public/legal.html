@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Legal Help By State</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-theme="usa" data-page="legal" data-title-key="legalPageTitle">
+    <header class="hero hero--compact">
+      <div class="container hero-inner">
+        <div class="hero-top">
+          <div class="controls" role="toolbar" aria-label="Display options">
+            <label class="control-label">
+              <span data-i18n="themeLabel">Flag colors</span>
+              <select id="themeSelect" class="theme-select"></select>
+            </label>
+            <div class="lang-toggle" role="group" aria-label="Language">
+              <span class="control-label" data-i18n="langLabel">Language</span>
+              <div class="lang-buttons">
+                <button type="button" id="langEn" class="lang-btn is-active" aria-pressed="true">
+                  English
+                </button>
+                <button type="button" id="langEs" class="lang-btn" aria-pressed="false">
+                  Español
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h1 data-i18n="legalTitle">Find Legal Help By State</h1>
+        <p data-i18n="legalHeroLead"></p>
+        <p class="disclaimer" data-i18n="disclaimer">
+          This website is educational information, not legal advice.
+        </p>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Primary">
+      <div class="container">
+        <ul class="nav-list">
+          <li><a href="./index.html" data-i18n="navHome">Home</a></li>
+          <li><a href="./rights.html" data-i18n="navRights">Know your rights</a></li>
+          <li><a href="./detained.html" data-i18n="navDetained">If detained</a></li>
+          <li><a href="./legal.html" data-i18n="navLegal">Legal help by state</a></li>
+          <li><a href="./guide.html" data-i18n="navGuide">Guided situation guide</a></li>
+          <li><a href="./quiz.html" data-i18n="navQuiz">Citizenship practice quiz</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section class="card">
+        <h2 data-i18n="legalTitle">Find Legal Help By State</h2>
+        <label for="stateSelect" data-i18n="stateLabel">Select your state:</label>
+        <div class="state-lookup">
+          <select id="stateSelect" aria-describedby="stateHint">
+            <option value="" data-i18n="statePlaceholder">Choose a state</option>
+          </select>
+          <a id="stateLink" href="#" target="_blank" rel="noopener noreferrer">
+            Open legal resources
+          </a>
+        </div>
+        <p id="stateHint" class="hint" data-i18n="stateHint"></p>
+        <p class="page-next">
+          <a href="./guide.html" data-i18n="nextGuide">Next: Guided situation guide →</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <p data-i18n="footerNote">
+        Add local nonprofit contacts and emergency hotline numbers for your community.
+      </p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

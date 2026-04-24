@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Immigration Information Hub</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-theme="usa" data-page="welcome" data-title-key="welcomePageTitle">
+    <header class="hero">
+      <div class="container hero-inner">
+        <div class="hero-top">
+          <div class="controls" role="toolbar" aria-label="Display options">
+            <label class="control-label">
+              <span data-i18n="themeLabel">Flag colors</span>
+              <select id="themeSelect" class="theme-select"></select>
+            </label>
+            <div class="lang-toggle" role="group" aria-label="Language">
+              <span class="control-label" data-i18n="langLabel">Language</span>
+              <div class="lang-buttons">
+                <button type="button" id="langEn" class="lang-btn is-active" aria-pressed="true">
+                  English
+                </button>
+                <button type="button" id="langEs" class="lang-btn" aria-pressed="false">
+                  Español
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h1 data-i18n="heroTitle">Immigration Information Hub</h1>
+        <p data-i18n="heroWelcomeLead">
+          Welcome. Use the menu or tiles below to explore rights, detention basics, legal help by
+          state, and a simple guided path.
+        </p>
+        <p class="disclaimer" data-i18n="disclaimer">
+          This website is educational information, not legal advice.
+        </p>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Primary">
+      <div class="container">
+        <ul class="nav-list">
+          <li>
+            <a href="./index.html" data-i18n="navHome">Home</a>
+          </li>
+          <li>
+            <a href="./rights.html" data-i18n="navRights">Know your rights</a>
+          </li>
+          <li>
+            <a href="./detained.html" data-i18n="navDetained">If detained</a>
+          </li>
+          <li>
+            <a href="./legal.html" data-i18n="navLegal">Legal help by state</a>
+          </li>
+          <li>
+            <a href="./guide.html" data-i18n="navGuide">Guided situation guide</a>
+          </li>
+          <li>
+            <a href="./quiz.html" data-i18n="navQuiz">Citizenship practice quiz</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <article class="card welcome-article">
+        <h2 data-i18n="welcomeIntroTitle">About this website</h2>
+        <p data-i18n="welcomeP1"></p>
+        <p data-i18n="welcomeP2"></p>
+        <p data-i18n="welcomeP3"></p>
+        <h2 class="welcome-subhead" data-i18n="welcomeHowTitle">What you can do here</h2>
+        <p data-i18n="welcomeHowLead"></p>
+      </article>
+
+      <h2 class="tiles-heading" data-i18n="welcomeTilesHeading">Browse sections</h2>
+      <div class="welcome-tiles">
+        <a class="tile" href="./rights.html">
+          <span class="tile-icon" aria-hidden="true">◎</span>
+          <h3 data-i18n="rightsTitle">Know Your Rights</h3>
+          <p data-i18n="welcomeTileRights"></p>
+        </a>
+        <a class="tile" href="./detained.html">
+          <span class="tile-icon" aria-hidden="true">◎</span>
+          <h3 data-i18n="detainedTitle">What To Do If Detained</h3>
+          <p data-i18n="welcomeTileDetained"></p>
+        </a>
+        <a class="tile" href="./legal.html">
+          <span class="tile-icon" aria-hidden="true">◎</span>
+          <h3 data-i18n="legalTitle">Find Legal Help By State</h3>
+          <p data-i18n="welcomeTileLegal"></p>
+        </a>
+        <a class="tile" href="./guide.html">
+          <span class="tile-icon" aria-hidden="true">◎</span>
+          <h3 data-i18n="guideTitle">Interactive Situation Guide</h3>
+          <p data-i18n="welcomeTileGuide"></p>
+        </a>
+        <a class="tile" href="./quiz.html">
+          <span class="tile-icon" aria-hidden="true">◎</span>
+          <h3 data-i18n="quizTitle">U.S. citizenship civics practice</h3>
+          <p data-i18n="welcomeTileQuiz"></p>
+        </a>
+      </div>
+    </main>
+
+    <footer class="container footer">
+      <p data-i18n="footerNote">
+        Add local nonprofit contacts and emergency hotline numbers for your community.
+      </p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Citizenship Test Practice</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-theme="usa" data-page="quiz" data-title-key="quizPageTitle">
+    <header class="hero hero--compact">
+      <div class="container hero-inner">
+        <div class="hero-top">
+          <div class="controls" role="toolbar" aria-label="Display options">
+            <label class="control-label">
+              <span data-i18n="themeLabel">Flag colors</span>
+              <select id="themeSelect" class="theme-select"></select>
+            </label>
+            <div class="lang-toggle" role="group" aria-label="Language">
+              <span class="control-label" data-i18n="langLabel">Language</span>
+              <div class="lang-buttons">
+                <button type="button" id="langEn" class="lang-btn is-active" aria-pressed="true">
+                  English
+                </button>
+                <button type="button" id="langEs" class="lang-btn" aria-pressed="false">
+                  Español
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h1 data-i18n="quizTitle">U.S. citizenship civics practice</h1>
+        <p data-i18n="quizHeroLead"></p>
+        <p class="disclaimer" data-i18n="disclaimer">
+          This website is educational information, not legal advice.
+        </p>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Primary">
+      <div class="container">
+        <ul class="nav-list">
+          <li><a href="./index.html" data-i18n="navHome">Home</a></li>
+          <li><a href="./rights.html" data-i18n="navRights">Know your rights</a></li>
+          <li><a href="./detained.html" data-i18n="navDetained">If detained</a></li>
+          <li><a href="./legal.html" data-i18n="navLegal">Legal help by state</a></li>
+          <li><a href="./guide.html" data-i18n="navGuide">Guided situation guide</a></li>
+          <li><a href="./quiz.html" data-i18n="navQuiz">Citizenship practice quiz</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container" id="civicsQuizRoot">
+      <section class="card civics-card">
+        <h2 data-i18n="quizTitle">U.S. citizenship civics practice</h2>
+        <div id="civicsIntro" class="civics-intro">
+          <p data-i18n="quizIntro"></p>
+          <p class="hint" data-i18n="quizDisclaimer"></p>
+        </div>
+        <p class="civics-actions">
+          <button type="button" id="civicsStartBtn" class="civics-start" data-i18n="quizStart"></button>
+        </p>
+        <div id="civicsQuizArea" class="civics-quiz-area" hidden>
+          <p id="civicsProgress" class="civics-progress" aria-live="polite"></p>
+          <p id="civicsQuestion" class="civics-question"></p>
+          <div id="civicsChoices" class="civics-choices" role="group" aria-labelledby="civicsQuestion"></div>
+          <p id="civicsFeedback" class="civics-feedback" aria-live="polite"></p>
+          <button type="button" id="civicsNextBtn" class="secondary civics-next" hidden></button>
+        </div>
+        <div id="civicsResults" class="civics-results" hidden>
+          <p id="civicsScoreLine" class="civics-score"></p>
+          <button type="button" id="civicsRetryBtn" class="civics-start" data-i18n="quizTryAgain"></button>
+        </div>
+        <p class="civics-official-wrap">
+          <a id="civicsOfficialLink" href="#" data-i18n="quizOfficialLink"></a>
+        </p>
+        <p class="page-next">
+          <a href="./index.html" data-i18n="backHome">← Back to home</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <p data-i18n="footerNote">
+        Add local nonprofit contacts and emergency hotline numbers for your community.
+      </p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
